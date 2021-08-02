@@ -1,15 +1,17 @@
+const TZYTokenABI = artifacts.require("TZYToken.sol");
+const AirdropABI = artifacts.require("Airdrop.sol");
+
 require("dotenv").config();
 
 const { time } = require("@openzeppelin/test-helpers");
 
 const THREE_DAYS_DURATION = time.duration.days(3);
-
-const TZYTokenABI = artifacts.require("TZYToken.sol");
-const AirdropABI = artifacts.require("Airdrop.sol");
+console.log(THREE_DAYS_DURATION.toString());
 
 module.exports = async function (deployer, network, addresses) {
   console.log(addresses);
-  const adminAddress = network === "bsc" ? "bsc-address" : "eth-address";
+  const adminAddress =
+    network === "bsc" ? process.env.PUBLIC_KEY : process.env.PUBLIC_KEY;
 
   //   await deployer.deploy(TZYTokenABI)
   // Done in 2_deploy_TZYTokenContractOnly
@@ -27,4 +29,6 @@ module.exports = async function (deployer, network, addresses) {
     AirdropContract.address,
     web3.utils.toWei("10000")
   );
+
+  console.log("AIRDROP DEPLOYYEEEDDDDDD");
 };

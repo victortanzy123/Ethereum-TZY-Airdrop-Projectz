@@ -1,0 +1,13 @@
+.glassContainer {
+  backdrop-filter: blur(13.6px);
+  -webkit-backdrop-filter: blur(13.6px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-image: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.67) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 15px;
+  border-bottom: 0px solid rgba(255, 255, 255, 1);
+  border-left: 0px solid rgba(255, 255, 255, 1);
+}

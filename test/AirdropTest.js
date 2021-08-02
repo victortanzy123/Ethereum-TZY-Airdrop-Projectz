@@ -24,7 +24,7 @@ contract("Airdrop DAO", (accounts) => {
   let TZYTokenContract, AirdropContract;
 
   const [admin, OGreceipient, _] = accounts;
-  console.log("admin account: ", accounts);
+  // console.log("admin account: ", accounts);
   const TOTAL_SUPPLY_OF_TZYTOKEN = web3.utils.toWei("1000000");
   const AIRDROP_SUPPLY = web3.utils.toWei("100000");
   console.log("AIRDROP_SUPPLY:", AIRDROP_SUPPLY);
