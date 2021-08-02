@@ -1,0 +1,283 @@
+.airDropContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c876b8,
+    #bb81c8,
+    #ac8cd5,
+    #9c96df,
+    #8ba3ec,
+    #78aff5,
+    #65bbfa,
+    #49cdff,
+    #35ddff,
+    #3fedfb,
+    #5ffbf1
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .glassContainer {
+    z-index: 20;
+    position: relative;
+    background: rgba(255, 184, 184, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 80%;
+    width: 70%;
+
+    .titleContainer {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      .title {
+        padding-top: 1rem;
+        color: #fff;
+        font-size: 80px;
+        font-weight: 450;
+        line-height: 46px;
+        text-shadow: 0 2px 4px rgb(71 97 206 / 36%);
+      }
+      .iconzContainer {
+        height: 80px;
+        width: 80px;
+        background-size: cover;
+        margin-left: 1rem;
+
+        .titleIcon {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .mainContainer {
+      width: 100%;
+      height: 450px;
+
+      display: flex;
+      overflow: none;
+
+      .left {
+        position: relative;
+        overflow: auto;
+        width: 45%;
+        height: 97%;
+        margin: 1rem;
+        border-radius: 15px;
+        background: rgba(189, 189, 189, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card-title {
+          position: absolute;
+          top: 20px;
+          margin: 0px;
+          font-size: 30px;
+          font-weight: 300;
+        }
+        .card-text {
+          position: absolute;
+          top: 100px;
+          ul {
+            margin: 0;
+            padding: 0 20px 0 20px;
+            list-style: none;
+            li {
+              margin-bottom: 22px;
+              font-size: 17px;
+              font-weight: 180;
+              color: rgb(58, 55, 55);
+              span {
+                font-size: 21px;
+                font-weight: 400;
+                color: rgb(73, 73, 73);
+              }
+            }
+          }
+        }
+      }
+      .right {
+        position: relative;
+        width: 45%;
+        height: 200px;
+        margin: 1rem;
+        border-radius: 15px;
+        background: rgba(189, 189, 189, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .txHeader {
+          font-size: 25px;
+          position: absolute;
+          top: 10px;
+          font-weight: 200;
+        }
+
+        .txDetailsContainer {
+          position: absolute;
+          top: 60px;
+          left: 35px;
+          width: 80%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          .messageLog {
+            font-size: 20px;
+            font-weight: 200;
+          }
+
+          .addressLog {
+            font-size: 20px;
+            font-weight: 200;
+          }
+          .amountLog {
+            font-size: 20px;
+            font-weight: 200;
+          }
+        }
+        form {
+          margin: 20px 0 0 0;
+          padding: 0;
+          position: absolute;
+          left: 0px;
+          top: 210px;
+          width: 100%;
+          .textfield {
+            // position: absolute;
+            // top: 235px;
+            padding: 0;
+            margin: 0 0 10px;
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 100;
+            // font-family: "Poppins", sans-serif;
+            background: hsla(0, 0%, 100%, 0.25);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid hsla(0, 0%, 100%, 0.25);
+          }
+          .submitButton {
+            // position: absolute;
+            // top: 300px;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            background: rgba(67, 95, 255, 0.8);
+            color: rgb(255, 255, 255);
+            border: 0;
+            font-size: 18px;
+            font-family: "Raleway", sans-serif;
+            transition: 0.6s;
+            overflow: hidden;
+            &:focus {
+              outline: 0;
+            }
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              background: rgba(233, 230, 230, 0.5);
+              width: 60px;
+              height: 45px;
+              left: 0;
+              top: 0;
+              opacity: 0.5;
+              filter: blur(30px);
+              transform: translateX(-100px) skewX(-15deg);
+            }
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              background: rgba(255, 255, 255, 0.2);
+              width: 30px;
+              height: 45px;
+              left: 30px;
+              top: 0;
+              opacity: 0;
+              filter: blur(5px);
+              transform: translateX(-100px) skewX(-15deg);
+            }
+            &:hover {
+              background: #5ee65e;
+              cursor: pointer;
+              &:before {
+                transform: translateX(430px) skewX(-15deg);
+                opacity: 0.6;
+                transition: 0.7s;
+              }
+              &:after {
+                transform: translateX(430px) skewX(-15deg);
+                opacity: 1;
+                transition: 0.7s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .glassDesign1 {
+    position: absolute;
+    top: 100px;
+    right: 150px;
+    transform: scale(3);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .glassDesign2 {
+    position: absolute;
+    bottom: 35px;
+    right: 450px;
+    transform: scale(1.5);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .glassDesign3 {
+    position: absolute;
+    bottom: 85px;
+    left: 150px;
+    overflow-y: hidden;
+    transform: scale(2.2);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .glassDesign4 {
+    position: absolute;
+    top: 35px;
+    left: 300px;
+    transform: scale(1.8);
+    opacity: 0.7;
+    z-index: 1;
+  }
+}

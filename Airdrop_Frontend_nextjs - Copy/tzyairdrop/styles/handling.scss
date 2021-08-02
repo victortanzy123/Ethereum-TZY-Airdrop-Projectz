@@ -1,0 +1,97 @@
+.modal {
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 35%;
+  height: 40%;
+  border-radius: 30px;
+  transform: translate(-50%, -50%);
+  min-width: clamp(10rem, 2vw, 30rem);
+  min-height: clamp(15rem, 2vh, 35rem);
+  backdrop-filter: blur(5px);
+  background-color: rgba(254, 251, 255, 0.4);
+
+  .modalTitle {
+    position: absolute;
+    top: 10%;
+    font-size: 33px;
+    font-weight: 300;
+  }
+
+  .modalMsg {
+    position: absolute;
+    top: 45%;
+    padding: 0 15px 0 15px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .modalBut {
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10%;
+    padding: 15px 40px;
+    // display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: absolute;
+    background-color: #fff;
+    color: #777;
+    animation: moveInBottom 1s ease-out;
+    animation-fill-mode: backwards;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+      background-color: #fff;
+    }
+  }
+}
+
+.overlay {
+  z-index: 998;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
